@@ -1,0 +1,13 @@
+{
+  "name": "bilingual-subtitle-vocab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/bundle-content.mjs",
+    "audit": "node scripts/audit-source.mjs",
+    "test": "npm run build && node --test && npm run audit && git diff --exit-code -- extension/content/content.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11"
+  }
+}

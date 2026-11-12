@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <title>双语字幕生词</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>生词本</h1>
+      <p id="probe" class="probe"></p>
+      <p id="empty" hidden>生词本为空</p>
+      <ul id="list"></ul>
+      <div class="actions">
+        <button type="button" id="export-json">导出 JSON</button>
+        <button type="button" id="export-csv">导出 CSV</button>
+      </div>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
