@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "双语字幕生词",
+  "version": "1.0.0",
+  "description": "Show the existing YouTube or Udemy original and target captions together, with an offline ECDICT lookup. No cloud translation.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://www.udemy.com/*",
+    "https://udemy.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "双语字幕生词",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/overlay.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.udemy.com/*",
+        "https://udemy.com/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/youtube-page-hook.js",
+        "content/udemy-page-hook.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://www.udemy.com/*",
+        "https://udemy.com/*"
+      ]
+    }
+  ]
+}

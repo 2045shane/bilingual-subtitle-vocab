@@ -1,0 +1,21 @@
+export const MESSAGES = {
+  miss: '未收录',
+  device: '设备端',
+  hitEmpty: '（词条无译文）',
+  noTarget: '无目标语字幕轨。未使用云翻译。',
+  fetchFailed: '字幕轨读取失败。未使用云翻译。',
+  noCaptions: '未发现平台字幕轨。',
+  loading: '正在读取平台字幕轨…',
+  dictNotLoaded: '词库未载入',
+  add: '加入生词本',
+  remove: '移出生词本',
+  source: '原文',
+  target: '目标',
+  deviceToggle: '设备端增强',
+  emptyBook: '生词本为空',
+  exportJson: '导出 JSON',
+  exportCsv: '导出 CSV',
+  noTargetOption: '（无目标语轨）',
+  translatorMissing: '当前环境没有 Translator API（content script 全局对象不可用）',
+  tools: '轨道'
+};
